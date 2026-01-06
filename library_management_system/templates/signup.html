@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Signup</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("/static/background.jpg") no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .signup-container {
+            width: 400px;
+            margin: 100px auto;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .signup-container img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-button {
+            background-color: #1668e3;
+            color: white;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .signup-button:hover {
+            background-color: #0d4fc4;
+        }
+
+        .login-link {
+            display: block;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="signup-container">
+        <img src="/static/mkcet_logo.png" alt="MKCET Logo">
+        <h2>Library Signup</h2>
+        <form method="POST" action="/signup">
+            <select name="role" required>
+                <option value="">Select Role</option>
+                <option value="Member">Member</option>
+                <option value="Admin">Admin</option>
+            </select>
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="email" name="email" placeholder="Enter your email" required>
+            <input type="password" name="password" placeholder="Create password" required>
+            <button type="submit" class="signup-button">Signup</button>
+        </form>
+        <a href="/login" class="login-link">Already have an account? Login</a>
+    </div>
+</body>
+</html>

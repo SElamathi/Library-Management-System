@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="POST">
+            <label for="role">Role</label>
+            <select name="role" required>
+                <option value="Admin">Admin</option>
+                <option value="Member">Member</option>
+            </select><br><br>
+
+            <label>Email</label>
+            <input type="email" name="email" required><br><br>
+
+            <label>Password</label>
+            <input type="password" name="password" required><br><br>
+
+            <input type="submit" value="Login">
+        </form>
+        <p>{{ message }}</p>
+    </div>
+</body>
+</html>
